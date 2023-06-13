@@ -1,16 +1,13 @@
-// document.getElementById("count-el").innerText = 5;
 
-// Initialize the count as 0
+let countEl = document.getElementById("count-el");let count = 0;
 
-// Store the variable to DisplayCount in HTML
-let countEl = document.getElementById("count-el");
-
-console.log(countEl);
-
-let count = 0;
-
-function increment(){
+function increment() {
     count = count + 1;
     countEl.innerText = count;
+}
+
+// 1. Create a function, save(), which logs out the count when it's called
+
+function save() {
     console.log(count);
 }
