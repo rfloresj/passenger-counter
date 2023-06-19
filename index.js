@@ -1,13 +1,20 @@
 
-let countEl = document.getElementById("count-el");let count = 0;
+let countEl = document.getElementById("count-el");
+let saveEl = document.getElementById("save-el");
+let reset = document.getElementById("reset");
+
+let count = 0;
 
 function increment() {
-    count = count + 1;
+    count += 1;
     countEl.innerText = count;
 }
 
-// 1. Create a function, save(), which logs out the count when it's called
+//Creates a function, save(), which prints out the count when it's called
 
 function save() {
-    console.log(count);
+    let countStr = count + " - ";
+    saveEl.textContent += countStr;
+    countEl.textContent = 0;
+    count = 0;
 }
